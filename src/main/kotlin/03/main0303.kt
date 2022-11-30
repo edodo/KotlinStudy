@@ -50,4 +50,14 @@ fun main(argv: Array<String>) {
     }
 
     println("Sum : $result")
+
+    val c = IntArray(10) {it*it}
+
+    for (i in 0..c.lastIndex step 2) {
+        c[i] *= 2
+    }
+    for(i in c.indices) {
+        println("$i : ${c[i]}")
+    }
+
 }
