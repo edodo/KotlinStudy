@@ -28,4 +28,9 @@ fun main() {
     val person = Person14("Choi" , "Seongmin")
     person.age = 20
     println(person.age)
+    val person2 = Person14("ccc" , "sss")
+    person2.age = 30
+    println(person.age)
+    println(person2.age)
+    println(person.age)
 }
