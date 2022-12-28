@@ -10,7 +10,10 @@ fun evalAtZero(f: (Int) -> Int) = f(0)
 fun inc(n: Int) = n +1
 fun dec(n: Int) = n -1
 
-class Person22(val firstName: String, val familyName: String)
+class Person22(val firstName: String, val familyName: String) {
+    fun hasNameOf(name: String) = name.equals(firstName, ignoreCase = true)
+}
+
 
 fun main(argv: Array<String>) {
     println(check22("Hello") { c-> isCapitalLetter(c)})
@@ -20,6 +23,10 @@ fun main(argv: Array<String>) {
     println(evalAtZero(::inc))
     println(evalAtZero(::dec))
 
-    val createPerson= ::Person
+    val createPerson= ::Person22
     createPerson("John", "Doe")
+
+    val isJohn = Person22("Choi", "Seongmin")::hasNameOf
+    println(isJohn("choi"))
+    println(isJohn("Choi"))
 }
