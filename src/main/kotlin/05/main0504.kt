@@ -10,6 +10,8 @@ fun evalAtZero(f: (Int) -> Int) = f(0)
 fun inc(n: Int) = n +1
 fun dec(n: Int) = n -1
 
+class Person22(val firstName: String, val familyName: String)
+
 fun main(argv: Array<String>) {
     println(check22("Hello") { c-> isCapitalLetter(c)})
     println(check22("Hello") { isCapitalLetter(it)})
@@ -17,4 +19,7 @@ fun main(argv: Array<String>) {
     fun dec(n: Int) = n -1
     println(evalAtZero(::inc))
     println(evalAtZero(::dec))
+
+    val createPerson= ::Person
+    createPerson("John", "Doe")
 }
