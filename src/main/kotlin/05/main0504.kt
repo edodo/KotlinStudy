@@ -5,9 +5,16 @@ fun check22(s: String, condition: (Char) -> Boolean): Boolean {
     return true
 }
 fun isCapitalLetter(c: Char) = c.isUpperCase() && c.isLetter()
+
+fun evalAtZero(f: (Int) -> Int) = f(0)
+fun inc(n: Int) = n +1
+fun dec(n: Int) = n -1
+
 fun main(argv: Array<String>) {
     println(check22("Hello") { c-> isCapitalLetter(c)})
     println(check22("Hello") { isCapitalLetter(it)})
     println(check("Hello", ::isCapitalLetter))
-
+    fun dec(n: Int) = n -1
+    println(evalAtZero(::inc))
+    println(evalAtZero(::dec))
 }
