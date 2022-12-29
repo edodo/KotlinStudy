@@ -14,6 +14,8 @@ class Person22(val firstName: String, val familyName: String) {
     fun hasNameOf(name: String) = name.equals(firstName, ignoreCase = true)
 }
 
+fun max12(a: Int, b: Int) = if( a > b ) a else b
+fun max12(a: Double, b: Double) = if (a > b) a else b
 
 fun main(argv: Array<String>) {
     println(check22("Hello") { c-> isCapitalLetter(c)})
@@ -29,4 +31,6 @@ fun main(argv: Array<String>) {
     val isJohn = Person22("Choi", "Seongmin")::hasNameOf
     println(isJohn("choi"))
     println(isJohn("Choi"))
+    val f: (Int, Int) -> Int = ::max
+    println(f(1,2))
 }
