@@ -23,6 +23,19 @@ class Person56 (private val firstName: String,
         // println("$firstName $familyName: ${message()}") // 인라인 함수로 private 멤버 전달 하면 오류로 사용금지.
     }
 }
+
+class Person562( val firstName: String,
+                 val familyName:String) {
+    /*
+    var fullName
+        inline get() = "$firstName $familyName"
+        set(value) = { ... }
+    */
+
+    //inline var age = 0
+}
+
+
 fun main(argv: Array<String>) {
     println(indexOf(intArrayOf(5, 3, 1, 4,3,2,1)) { it < 3 } )
 
