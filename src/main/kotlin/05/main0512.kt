@@ -7,4 +7,4 @@ fun aggregate512(numbers: IntArray, op: Int.(Int) -> Int): Int {
     return result
 }
 
-fun sum512(numbers: IntArray) = aggregate(numbers) { op -> this + op }
+//fun sum512(numbers: IntArray) = aggregate(numbers) { op -> this + op }
